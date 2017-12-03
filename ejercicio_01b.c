@@ -16,34 +16,37 @@ print e
 //Ahora en C
 
 #include "stdio.h"
-int sum(int *v, int x); //alocar espacio de memoria v de tamaño x
+
+
+int sum(int *v, int x, int i); //alocar espacio de memoria v de tamaño x
+
 
 //Definición de variables
-int main()
-{
+int main() {
   int i; //contador
- 
+  int x = 1000; 
+  int *v;
 
 /*printf("Introduce un numero entero\n");
 scanf(" %d",&x); //Guarda el número introducido por el usuario en la variable x
   */ 
   
-  for (i=1;i<=x;i++)
-  {
+  for (i=1;i<=x;i++) {
      if ((x % 3 == 0 ) || (x % 5 == 0) ) {
-	v[i]=x;
-     }
+	v[i]=x; }
      else { 
-        v[i]=0;
-      }
+        v[i]=0; }
   }
+//  printf("%d\n",v[i])
+  return 0;} 
 
-  int sum(int *v, int n){
+int sum(int *v, int x, int i){
   int e;
   for (i=1;i<=x;i++) {
      e += v[i];
    } 
    
-   printf( "La suma total es %dn", e );
+   printf( "La suma total es %d\n", e );
    
-return 0;
+return e;}
+
